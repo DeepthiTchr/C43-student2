@@ -88,6 +88,7 @@ class Game {
             }
         console.log(displayHeight)
         console.log(  player.distance  )
+
             if(player.distance < 3700){
               if(keyIsDown(38) && player.index !== null){
                   yVel += 0.9;
@@ -103,8 +104,9 @@ class Game {
               }else{
                   yVel *= 0.985;
                   xVel *= 0.985;
-              }
-            }else if(passedFinish === false){
+              } 
+              
+              if(passedFinish === false){
             yVel *= 0.7;
               xVel *= 0.7;
               Player.updateFinishedPlayers();
@@ -113,9 +115,6 @@ class Game {
               player.update();
               passedFinish = true;
           }
-          
-          
-          
           else{
               yVel *= 0.8;
               xVel *= 0.8;
@@ -132,7 +131,6 @@ class Game {
           drawSprites();
         }
       }
-      /*
         displayRanks(){
           //display the medals
           camera.position.y = 0;
@@ -160,5 +158,10 @@ class Game {
                   text("Honorable Mention: " + allPlayers[plr].name, 0, 225);
               }
           }
+        }
       }
-  }*/
+
+    
+      
+    
+  
